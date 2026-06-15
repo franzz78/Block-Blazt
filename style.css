@@ -1,0 +1,129 @@
+:root {
+    --bg-color: #121214;
+    --container-bg: #1a1a24;
+    --grid-bg: #262636;
+    --cell-empty: #323246;
+    --text-color: #ffffff;
+    --primary-color: #4e54c8;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    user-select: none;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.game-container {
+    background: var(--container-bg);
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    max-width: 420px;
+    width: 100%;
+}
+
+.header h1 {
+    font-size: 24px;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    color: #00f2fe;
+    text-shadow: 0 0 10px rgba(0, 242, 254, 0.5);
+}
+
+.score-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.score-box {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.score-box span {
+    color: #00f2fe;
+    font-size: 16px;
+}
+
+/* Grid Papan Game 8x8 */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    gap: 4px;
+    background: var(--grid-bg);
+    padding: 8px;
+    border-radius: 12px;
+    aspect-ratio: 1 / 1;
+    margin-bottom: 25px;
+}
+
+.cell {
+    background: var(--cell-empty);
+    border-radius: 4px;
+    transition: background 0.2s, transform 0.1s;
+}
+
+.cell.filled {
+    box-shadow: inset 0 0 8px rgba(255, 255, 255, 0.3);
+}
+
+/* Kontainer Pilihan Balok di Bawah */
+.pieces-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 110px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.mini-piece {
+    display: grid;
+    gap: 2px;
+    cursor: grab;
+    transition: transform 0.2s;
+}
+
+.mini-piece:active {
+    cursor: grabbing;
+    transform: scale(1.1);
+}
+
+/* Tombol */
+.btn {
+    background: linear-gradient(45deg, #4e54c8, #8f94fb);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    opacity: 0.9;
+    box-shadow: 0 5px 15px rgba(143, 148, 251, 0.4);
+}
