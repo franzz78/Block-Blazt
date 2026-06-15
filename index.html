@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Block Blast Puzzle Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#1a1a2e">
+</head>
+<body>
+
+    <div class="game-container">
+        <div class="header">
+            <h1>BLOCK BLAST</h1>
+            <div class="score-container">
+                <div class="score-box">Score: <span id="score">0</span></div>
+                <div class="score-box">High Score: <span id="high-score">0</span></div>
+            </div>
+        </div>
+
+        <div id="grid" class="grid"></div>
+
+        <div class="pieces-container" id="pieces-container"></div>
+
+        <button id="restart-btn" class="btn">Main Lagi</button>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-database-compat.js"></script>
+
+    <script src="script.js"></script>
+</body>
+</html>
