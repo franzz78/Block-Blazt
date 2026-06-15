@@ -1,0 +1,17 @@
+{
+  "short_name": "BlockBlast",
+  "name": "Block Blast Firebase Puzzle",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/566/566301.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "./index.html",
+  "background_color": "#1a1a24",
+  "theme-color": "#1a1a2e",
+  "display": "standalone",
+  "orientation": "portrait"
+}
+
